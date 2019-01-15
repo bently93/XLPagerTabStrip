@@ -81,6 +81,8 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
     public var changeCurrentIndex: ((_ oldCell: ButtonBarViewCell?, _ newCell: ButtonBarViewCell?, _ animated: Bool) -> Void)?
     public var changeCurrentIndexProgressive: ((_ oldCell: ButtonBarViewCell?, _ newCell: ButtonBarViewCell?, _ progressPercentage: CGFloat, _ changeCurrentIndex: Bool, _ animated: Bool) -> Void)?
 
+    public var updateDelegate: PagerTabUpdateDelegate?
+    
     @IBOutlet public weak var buttonBarView: ButtonBarView!
 
     lazy private var cachedCellWidths: [CGFloat]? = { [unowned self] in
@@ -304,6 +306,7 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
                 changeCurrentIndex(cells.first!, cells.last!, true)
             }
         }
+        self.updateDelegate?.updateIndex(for: indexPath.item)
         moveToViewController(at: indexPath.item)
     }
 
@@ -410,4 +413,8 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
     private var shouldUpdateButtonBarView = true
     private var collectionViewDidLoad = false
 
+}
+
+public protocol PagerTabUpdateDelegate {
+    func updateIndex(for index: Int)
 }
