@@ -83,31 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		281BFDBE1C511B890090C26F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CB7D614E1C529BB600A957BA /* FXPageControl */,
-				CB0986C91C515D9A00DF7087 /* ButtonCell.xib */,
-				CBA0A1FB1C502DA300C5748C /* BarView.swift */,
-				CB0986C51C51395E00DF7087 /* ButtonBarView.swift */,
-				CB0986C71C5158A000DF7087 /* ButtonBarViewCell.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		281BFDBF1C511B9A0090C26F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CBA0A1FA1C502DA300C5748C /* BarPagerTabStripViewController.swift */,
-				CB86ED6A1C4D6E6C00DA463B /* PagerTabStripViewController.swift */,
-				CB71C6ED1C4EB988008EC806 /* SegmentedPagerTabStripViewController.swift */,
-				CB0986C31C51391600DF7087 /* ButtonBarPagerTabStripViewController.swift */,
-				CBBD43611C527E80001A748E /* TwitterPagerTabStripViewController.swift */,
-				28C83C831C54229A000B2902 /* BaseButtonBarPagerTabStripViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		28F828731C494B2C00330CF4 = {
 			isa = PBXGroup;
 			children = (
@@ -149,23 +124,56 @@
 		28F828971C494B4200330CF4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				281BFDBF1C511B9A0090C26F /* Controllers */,
-				281BFDBE1C511B890090C26F /* Views */,
-				28E098BD1C5002D90083B788 /* PagerTabStripError.swift */,
-				28E098BF1C5003130083B788 /* SwipeDirection.swift */,
-				281BFDC01C511C420090C26F /* IndicatorInfo.swift */,
-				281BFDC21C511F120090C26F /* PagerTabStripBehaviour.swift */,
+				EB9DA3A021EE034A009476AB /* Models */,
+				EB9DA39E21EE0314009476AB /* Views */,
+				EB9DA39C21EE02F3009476AB /* Controllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		CB7D614E1C529BB600A957BA /* FXPageControl */ = {
+		EB9DA39C21EE02F3009476AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBA0A1FA1C502DA300C5748C /* BarPagerTabStripViewController.swift */,
+				CB86ED6A1C4D6E6C00DA463B /* PagerTabStripViewController.swift */,
+				CB71C6ED1C4EB988008EC806 /* SegmentedPagerTabStripViewController.swift */,
+				CB0986C31C51391600DF7087 /* ButtonBarPagerTabStripViewController.swift */,
+				CBBD43611C527E80001A748E /* TwitterPagerTabStripViewController.swift */,
+				28C83C831C54229A000B2902 /* BaseButtonBarPagerTabStripViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB9DA39E21EE0314009476AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB0986C91C515D9A00DF7087 /* ButtonCell.xib */,
+				CBA0A1FB1C502DA300C5748C /* BarView.swift */,
+				CB0986C51C51395E00DF7087 /* ButtonBarView.swift */,
+				CB0986C71C5158A000DF7087 /* ButtonBarViewCell.swift */,
+				EB9DA39F21EE0322009476AB /* FXPageControl */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB9DA39F21EE0322009476AB /* FXPageControl */ = {
 			isa = PBXGroup;
 			children = (
 				CB7D614A1C529B9500A957BA /* FXPageControl.h */,
 				CB7D614B1C529B9500A957BA /* FXPageControl.m */,
 			);
-			name = FXPageControl;
+			path = FXPageControl;
+			sourceTree = "<group>";
+		};
+		EB9DA3A021EE034A009476AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28E098BD1C5002D90083B788 /* PagerTabStripError.swift */,
+				28E098BF1C5003130083B788 /* SwipeDirection.swift */,
+				281BFDC01C511C420090C26F /* IndicatorInfo.swift */,
+				281BFDC21C511F120090C26F /* PagerTabStripBehaviour.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
